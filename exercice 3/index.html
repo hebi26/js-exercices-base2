@@ -6,7 +6,21 @@
 </head>
 <body>
   <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" />
+    <label for="nom">Votre nom  : </label>
+    <input type="text" name="nom" value="" id="name" />
+
+    <script>
+
+    var reponse = document.getElementById('name').value;
+
+    document.getElementById("name").onkeypress = function(){
+
+      alert(reponse);
+    };
+
+
+    </script>
+
   </form>
 </body>
 </html>

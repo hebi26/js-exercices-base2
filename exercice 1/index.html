@@ -6,5 +6,19 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1" />
+
+      <script>
+
+      document.getElementById("image1").onmouseenter = function(){
+        this.setAttribute("src", "./images/image1_2.jpg");
+
+      this.onmouseout = function(){
+        this.setAttribute("src", "./images/image1.jpg");
+
+      };
+    };
+
+      </script>
+
   </body>
 </html>

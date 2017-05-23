@@ -12,5 +12,38 @@
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
     </div>
+
+<script>
+
+
+var ibloc = document.getElementsByTagName("img");
+var i;
+for(i=0; i < ibloc.length; i++){
+
+
+  ibloc[i].onmouseenter = function(){
+
+    var newbloc= this.getAttribute("src");
+    var fbloc= newbloc.replace(".jpg", "_2.jpg");
+
+    if(newbloc.includes("_2.jpg")===false){
+      this.setAttribute("src", fbloc);
+    }
+  };
+
+
+ibloc[i].onmouseout = function(){
+
+    var newbloc= this.getAttribute("src");
+    var fbloc= newbloc.replace("_2.jpg", ".jpg");
+
+    if(newbloc.includes("_2.jpg")){
+      this.setAttribute("src", fbloc);
+    }
+  };
+};
+
+</script>
+
   </body>
 </html>
